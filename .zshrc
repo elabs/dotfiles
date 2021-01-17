@@ -71,10 +71,18 @@ bindkey '^e' edit-command-line
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source ~/.bash_aliases
+gi () {
+    if [git -C . rev-parse != 0]; then
+        vim .gitignore
+    else
+        echo "Not a Git Repo | Make one using git init"
+    fi
+}
 alias vim='nvim'
 alias la='ls -a'
 alias cdf='cd ~/dotfiles'
 alias ta='tmux attach -t'
+alias gi='vim .gitignore'
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
         tmux attach -t default || tmux new -s default
     fi
