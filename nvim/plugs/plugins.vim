@@ -25,6 +25,7 @@ call plug#begin("~/.config/nvim/autoload/plugged")
     Plug 'junegunn/gv.vim'
     Plug 'pangloss/vim-javascript'
     Plug 'tpope/vim-surround'
+    Plug 'chrisbra/recover.vim'
 call plug#end()
 
 

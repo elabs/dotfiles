@@ -83,6 +83,6 @@ alias la='ls -a'
 alias cdf='cd ~/dotfiles'
 alias ta='tmux attach -t'
 alias gi='vim .gitignore'
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-        tmux attach -t default || tmux new -s default
-    fi
+#if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+#        tmux attach -t default || tmux new -s default
+#    fi
